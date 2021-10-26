@@ -1,3 +1,3 @@
-lbft.a
+libft.a
 *.o
 .DS_Store
