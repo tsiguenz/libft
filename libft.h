@@ -6,7 +6,7 @@
 /*   By: tsiguenz <tsiguenz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 23:22:38 by thibautsi         #+#    #+#             */
-/*   Updated: 2021/10/27 16:45:24 by tsiguenz         ###   ########.fr       */
+/*   Updated: 2021/11/10 00:37:56 by tsiguenz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_strlen(const char *s);
-//ft_memset();
+void 		*ft_memset(void *str, int c, unsigned int n);
 //ft_bzero();
 //ft_memcpy();
 //ft_memmove();
