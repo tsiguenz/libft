@@ -6,7 +6,7 @@
 /*   By: tsiguenz <tsiguenz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 23:22:38 by thibautsi         #+#    #+#             */
-/*   Updated: 2021/11/14 19:24:02 by tsiguenz         ###   ########.fr       */
+/*   Updated: 2021/11/15 01:16:57 by debian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ int		ft_isprint(int c);
 int		ft_strlen(const char *s);
 void 		*ft_memset(void *str, int c, size_t n);
 void		ft_bzero(void *s, int n);
-//ft_memcpy();
-//ft_memmove();
+void		*ft_memcpy(void *dest, const void *src, size_t n);
+void		*ft_memmove(void *dest, const void *src, size_t n);
 //ft_strlcpy();
 //ft_strlcat();
 int		ft_toupper(int c);
