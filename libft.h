@@ -6,7 +6,7 @@
 /*   By: tsiguenz <tsiguenz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 23:22:38 by thibautsi         #+#    #+#             */
-/*   Updated: 2021/11/16 00:47:01 by debian           ###   ########.fr       */
+/*   Updated: 2021/11/17 01:44:32 by debian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ size_t		ft_strlcpy(char *dst, const char *src, size_t size);
 size_t		ft_strlcat(char *dst, const char *src, size_t size);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
-//char		*ft_strchr(const char *s, int c);
+char		*ft_strchr(const char *s, int c);
+char		*ft_strrchr(const char *s, int c);
 
 #endif //LIBFT_H

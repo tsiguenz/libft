@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tsiguenz <tsiguenz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: debian <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/01 09:04:34 by tsiguenz          #+#    #+#             */
-/*   Updated: 2021/10/13 15:15:29 by tsiguenz         ###   ########.fr       */
+/*   Created: 2021/11/17 01:34:51 by debian            #+#    #+#             */
+/*   Updated: 2021/11/17 01:47:31 by debian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
+#include "libft.h"
+
+char	*ft_strrchr(const char *s, int c)
 {
-	while (s)
+	char	*p_s;
+	int	len;
+
+	len = ft_strlen(s);
+	p_s = (char *) s;
+	if (p_s[len] == c)
+		return (&p_s[len]);
+	while (len >= 0)
 	{
-		if (*s == c)
-			return ((char *) s);
-		s++;
+		if (p_s[len] == c)
+			return (&p_s[len]);
+		len--;
 	}
-	if (*s == c)
-		return ((char *) s);
-	return ('\0');
+	return (0);
 }
