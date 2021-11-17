@@ -6,7 +6,7 @@
 /*   By: debian <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 01:34:51 by debian            #+#    #+#             */
-/*   Updated: 2021/11/17 01:47:31 by debian           ###   ########.fr       */
+/*   Updated: 2021/11/17 02:55:28 by tsiguenz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	char	*p_s;
-	int	len;
+	int		len;
 
 	len = ft_strlen(s);
 	p_s = (char *) s;
