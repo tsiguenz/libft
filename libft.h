@@ -6,7 +6,7 @@
 /*   By: tsiguenz <tsiguenz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 23:22:38 by thibautsi         #+#    #+#             */
-/*   Updated: 2021/11/18 01:08:46 by debian           ###   ########.fr       */
+/*   Updated: 2021/11/21 22:03:40 by debian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,6 @@ void		*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char		*ft_strnstr(const char *bit, const char *little, size_t len);
 int		ft_atoi(const char *nptr);
+void		*ft_calloc(size_t nmemb, size_t size);
 
 #endif //LIBFT_H
