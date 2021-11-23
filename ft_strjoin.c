@@ -6,7 +6,7 @@
 /*   By: debian <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 23:01:39 by debian            #+#    #+#             */
-/*   Updated: 2021/11/23 00:01:17 by debian           ###   ########.fr       */
+/*   Updated: 2021/11/23 16:23:24 by tsiguenz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 char	*ft_strjoin(const char *s1, const char *s2)
 {
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 	char	*res;
 
 	i = 0;

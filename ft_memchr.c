@@ -6,16 +6,17 @@
 /*   By: tsiguenz <tsiguenz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 15:11:38 by tsiguenz          #+#    #+#             */
-/*   Updated: 2021/11/17 15:52:48 by tsiguenz         ###   ########.fr       */
+/*   Updated: 2021/11/23 16:22:50 by tsiguenz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned int	i;
-	char	*p_s;
-	
+	char			*p_s;
+
 	i = 0;
 	p_s = (char *) s;
 	if (*p_s == c)

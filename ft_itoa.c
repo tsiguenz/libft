@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: debian <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: tsiguenz <tsiguenz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/21 21:46:49 by debian            #+#    #+#             */
-/*   Updated: 2021/11/23 16:20:18 by tsiguenz         ###   ########.fr       */
+/*   Created: 2021/11/23 17:42:14 by tsiguenz          #+#    #+#             */
+/*   Updated: 2021/11/23 18:27:33 by tsiguenz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
+#include <stdlib.h>
 
-void	*ft_calloc(size_t nmemb, size_t size)
+char	*ft_itoa(int n)
 {
-	size_t	i;
-	void	*ptr;
-
-	i = 0;
-	ptr = malloc(nmemb * size);
-	if (ptr == 0)
+	char	*res;
+	int		neg;
+	
+	neg = 1;
+	res = malloc(  * sizeof(char));
+	if (res == 0)
 		return (0);
-	while (i < (nmemb * size))
-	{
-		*(char *)(ptr + i) = 0;
-		i++;
-	}
-	return (ptr);
+	if (n < 0)
+		neg = neg * -1;
+	
+	return (res);
 }
