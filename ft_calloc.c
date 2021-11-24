@@ -6,11 +6,10 @@
 /*   By: debian <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 21:46:49 by debian            #+#    #+#             */
-/*   Updated: 2021/11/23 16:20:18 by tsiguenz         ###   ########.fr       */
+/*   Updated: 2021/11/24 18:20:51 by tsiguenz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)

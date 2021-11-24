@@ -6,7 +6,7 @@
 /*   By: debian <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 00:40:04 by debian            #+#    #+#             */
-/*   Updated: 2021/11/16 00:48:26 by debian           ###   ########.fr       */
+/*   Updated: 2021/11/24 18:17:58 by tsiguenz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	att_len;
+	size_t	i;
+	size_t	j;
+	size_t	att_len;
 
 	i = ft_strlen(dst);
 	j = 0;

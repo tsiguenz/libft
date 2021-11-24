@@ -6,14 +6,13 @@
 /*   By: tsiguenz <tsiguenz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 10:21:15 by tsiguenz          #+#    #+#             */
-/*   Updated: 2021/11/23 16:21:46 by tsiguenz         ###   ########.fr       */
+/*   Updated: 2021/11/24 18:19:26 by tsiguenz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-int	is_set(char c, const char *set)
+static int	is_set(char c, const char *set)
 {
 	int	i;
 
@@ -27,7 +26,7 @@ int	is_set(char c, const char *set)
 	return (0);
 }
 
-int	all_set(const char *str, const char *set)
+static int	all_set(const char *str, const char *set)
 {
 	int	i;
 
@@ -41,7 +40,7 @@ int	all_set(const char *str, const char *set)
 	return (1);
 }
 
-int	len_lt(const char *s1, const char *set)
+static int	len_lt(const char *s1, const char *set)
 {
 	int	i;
 
@@ -51,7 +50,7 @@ int	len_lt(const char *s1, const char *set)
 	return (i);
 }
 
-int	len_rt(const char *s1, const char *set)
+static int	len_rt(const char *s1, const char *set)
 {
 	int	i;
 	int	j;

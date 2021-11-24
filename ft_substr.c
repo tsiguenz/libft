@@ -6,11 +6,10 @@
 /*   By: tsiguenz <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 19:10:15 by tsiguenz          #+#    #+#             */
-/*   Updated: 2021/11/23 16:11:21 by tsiguenz         ###   ########.fr       */
+/*   Updated: 2021/11/24 18:19:36 by tsiguenz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_substr(const char *s, unsigned int start, size_t len)

@@ -6,12 +6,11 @@
 /*   By: debian <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 23:01:39 by debian            #+#    #+#             */
-/*   Updated: 2021/11/23 16:23:24 by tsiguenz         ###   ########.fr       */
+/*   Updated: 2021/11/24 18:17:00 by tsiguenz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strjoin(const char *s1, const char *s2)
 {

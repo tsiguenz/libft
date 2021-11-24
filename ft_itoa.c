@@ -6,13 +6,11 @@
 /*   By: tsiguenz <tsiguenz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 11:01:35 by tsiguenz          #+#    #+#             */
-/*   Updated: 2021/11/24 14:47:13 by tsiguenz         ###   ########.fr       */
+/*   Updated: 2021/11/24 18:20:29 by tsiguenz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
-#include <stdio.h>
 
 static char	*ft_strrev(char *str)
 {

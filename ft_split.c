@@ -6,11 +6,11 @@
 /*   By: tsiguenz <tsiguenz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 16:25:43 by tsiguenz          #+#    #+#             */
-/*   Updated: 2021/11/23 17:47:23 by tsiguenz         ###   ########.fr       */
+/*   Updated: 2021/11/24 18:16:42 by tsiguenz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 static int	wordcount(const char *s, char c)
 {
