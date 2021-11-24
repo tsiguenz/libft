@@ -6,7 +6,7 @@
 /*   By: tsiguenz <tsiguenz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 23:22:38 by thibautsi         #+#    #+#             */
-/*   Updated: 2021/11/23 17:08:08 by tsiguenz         ###   ########.fr       */
+/*   Updated: 2021/11/24 16:24:53 by tsiguenz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,8 @@ char		*ft_substr(const char *s, unsigned int start, size_t len);
 char		*ft_strjoin(const char *s1, const char *s2);
 char		*ft_strtrim(const char *s1, const char *s2);
 char		**ft_split(const char *s, char c);
+char		*ft_itoa(int n);
+char		*ft_strmapi(const char *s, char (*f)(unsigned int, char));
+char		*ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 #endif //LIBFT_H
