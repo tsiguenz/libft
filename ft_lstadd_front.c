@@ -6,11 +6,13 @@
 /*   By: tsiguenz <tsiguenz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 15:04:21 by tsiguenz          #+#    #+#             */
-/*   Updated: 2021/11/25 15:17:12 by tsiguenz         ###   ########.fr       */
+/*   Updated: 2021/11/25 16:11:13 by tsiguenz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_lstadd_front(t_list **alst, t_list *new)
+#include "libft.h"
+
+void	ft_lstadd_front(t_list **alst, t_list *new)
 {
-	alst->next = &new->next;
+	alst->next = &(new->next);
 }
