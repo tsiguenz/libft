@@ -6,7 +6,7 @@
 #    By: tsiguenz <tsiguenz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/08 19:56:21 by tsiguenz          #+#    #+#              #
-#    Updated: 2021/11/26 21:35:35 by tsiguenz         ###   ########.fr        #
+#    Updated: 2021/11/29 16:57:04 by tsiguenz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ SRC = 	ft_atoi.c \
 		ft_memmove.c \
 		ft_memset.c \
 		ft_putchar_fd.c \
-		ft_putendl.c \
+		ft_putendl_fd.c \
 		ft_putnbr_fd.c \
 		ft_putstr_fd.c \
 		ft_split.c \

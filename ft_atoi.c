@@ -6,11 +6,19 @@
 /*   By: debian <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 01:00:41 by debian            #+#    #+#             */
-/*   Updated: 2021/11/18 01:35:01 by debian           ###   ########.fr       */
+/*   Updated: 2021/11/29 21:58:32 by tsiguenz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+int	ft_isspace(char c)
+{
+	if (c == ' ' || c == '\n' || c == '\t' || c == '\v' || c == '\f'
+		|| c == '\r')
+		return (1);
+	return (0);
+}
 
 int	ft_atoi(const char *nptr)
 {
@@ -21,13 +29,14 @@ int	ft_atoi(const char *nptr)
 	res = 0;
 	neg = 1;
 	i = 0;
-	while (nptr[i] == ' ')
+	while (ft_isspace(nptr[i]))
 		i++;
-	if (!ft_isdigit(nptr[i]) && nptr[i] != '-')
+	if (!ft_isdigit(nptr[i]) && nptr[i] != '-' && nptr[i] != '+')
 		return (0);
-	if (nptr[i] == '-')
+	if (nptr[i] == '-' || nptr[i] == '+')
 	{
-		neg = -1;
+		if (nptr[i] == '-')
+			neg = -1;
 		i++;
 	}
 	while (nptr[i] && ft_isdigit(nptr[i]))

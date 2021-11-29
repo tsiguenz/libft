@@ -6,22 +6,24 @@
 /*   By: tsiguenz <tsiguenz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/01 09:04:34 by tsiguenz          #+#    #+#             */
-/*   Updated: 2021/11/17 01:44:11 by debian           ###   ########.fr       */
+/*   Updated: 2021/11/29 21:09:44 by tsiguenz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strchr(const char *s, int c)
 {
-	char	*p_s;
+	int	i;
 
-	p_s = (char *) s;
-	if (*p_s == c)
-		return (p_s);
-	while (*p_s != '\0')
+	i = 0;
+	if (s[i] == c)
+		return ((char *)s);
+	while (s[i])
 	{
-		if (*p_s == c)
-			return (p_s);
-		p_s++;
+		if ((char)s[i] == c)
+			return ((char *)(s + i));
+		i++;
 	}
+	if ((char)s[i] == c)
+		return ((char *)(s + i));
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: debian <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 23:36:51 by debian            #+#    #+#             */
-/*   Updated: 2021/11/24 18:18:40 by tsiguenz         ###   ########.fr       */
+/*   Updated: 2021/11/29 21:45:21 by tsiguenz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,18 +21,17 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	j = 0;
 	if (!*little)
 		return ((char *) big);
-	while (big[i] != 0 && i < len - 1)
+	while (big[i] != 0 && i < len)
 	{
-		while (big[i] && little[j] && big[i] == little[j])
+		j = 0;
+		while (big[i + j] && little[j] && big[i + j] == little[j]
+			&& i + j < len)
 		{
-			i++;
+			if (little[j + 1] == 0)
+				return ((char *)(big + i));
 			j++;
 		}
-		if (little[j] == 0 || i == len)
-			return ((char *) &big[i - j]);
-		if (big[i] != 0)
-			i++;
-		j = 0;
+		i++;
 	}
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: tsiguenz <tsiguenz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 11:01:35 by tsiguenz          #+#    #+#             */
-/*   Updated: 2021/11/24 18:20:29 by tsiguenz         ###   ########.fr       */
+/*   Updated: 2021/11/29 23:45:15 by tsiguenz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static char	*ft_strrev(char *str)
 
 	i = 0;
 	j = ft_strlen(str);
-	tmp = malloc((ft_strlen(str) + 1) * sizeof(char));
+	tmp = ft_calloc((ft_strlen(str) + 1), sizeof(char));
 	if (tmp == 0)
 		return (0);
 	tmp[j--] = 0;
@@ -30,7 +30,8 @@ static char	*ft_strrev(char *str)
 		i++;
 		j--;
 	}
-	return (tmp);
+	str = tmp;
+	return (str);
 }
 
 static int	len_itoa(int n)
@@ -71,7 +72,7 @@ char	*ft_itoa(int n)
 	i = 0;
 	neg = is_neg(n);
 	n = n * neg;
-	dest = malloc((len_itoa(n) + 1) * sizeof(char));
+	dest = ft_calloc((len_itoa(n) + 1), sizeof(char));
 	if (dest == 0)
 		return (0);
 	if (n == -2147483648)
@@ -84,6 +85,6 @@ char	*ft_itoa(int n)
 	dest[i] = n + 48;
 	if (neg == -1)
 		dest[++i] = '-';
-	dest[++i] = 0;
-	return (ft_strrev(dest));
+	dest = ft_strrev(dest);
+	return (dest);
 }

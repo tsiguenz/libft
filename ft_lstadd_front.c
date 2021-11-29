@@ -6,7 +6,7 @@
 /*   By: tsiguenz <tsiguenz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 15:04:21 by tsiguenz          #+#    #+#             */
-/*   Updated: 2021/11/26 15:57:36 by tsiguenz         ###   ########.fr       */
+/*   Updated: 2021/11/29 18:21:23 by tsiguenz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 
 void	ft_lstadd_front(t_list **alst, t_list *new)
 {
-	new->next = *alst;
-	*alst = new;
+	if (alst)
+	{
+		if (*alst)
+			new->next = *alst;
+		*alst = new;
+	}
 }

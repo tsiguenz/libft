@@ -6,7 +6,7 @@
 /*   By: tsiguenz <tsiguenz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 10:21:15 by tsiguenz          #+#    #+#             */
-/*   Updated: 2021/11/24 18:19:26 by tsiguenz         ###   ########.fr       */
+/*   Updated: 2021/11/29 22:32:09 by tsiguenz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,16 +76,17 @@ char	*ft_strtrim(const char *s1, const char *set)
 	j = 0;
 	len_dest = ft_strlen(s1) - (i + len_rt(s1, set)) + 1;
 	if (all_set(s1, set))
-		return ("");
-	dest = malloc(len_dest * sizeof(char));
+		return (ft_strdup(""));
+	if (!set)
+		return (ft_strdup(s1));
+	dest = ft_calloc(len_dest, sizeof(char));
 	if (dest == 0)
 		return (0);
 	while (i < ft_strlen(s1) - len_rt(s1, set))
 	{
-		dest[j] = (char) s1[i];
+		dest[j] = s1[i];
 		i++;
 		j++;
 	}
-	dest[j] = 0;
 	return (dest);
 }

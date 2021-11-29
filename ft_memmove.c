@@ -6,17 +6,31 @@
 /*   By: debian <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 00:45:56 by debian            #+#    #+#             */
-/*   Updated: 2021/11/17 14:31:43 by tsiguenz         ###   ########.fr       */
+/*   Updated: 2021/11/29 20:12:57 by tsiguenz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char	*tmp;
+	char	*s;
+	char	*d;
+	size_t	i;
 
-	tmp = (char *) src;
-	ft_memcpy(dest, tmp, n);
-	return (dest);
+	s = (char *)src;
+	d = (char *)dst;
+	i = 0;
+	if (d > s)
+		while (len--)
+			d[len] = s[len];
+	else
+	{
+		while (i < len)
+		{
+			d[i] = s[i];
+			i++;
+		}
+	}
+	return (dst);
 }
