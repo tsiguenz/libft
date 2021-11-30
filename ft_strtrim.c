@@ -6,7 +6,7 @@
 /*   By: tsiguenz <tsiguenz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 10:21:15 by tsiguenz          #+#    #+#             */
-/*   Updated: 2021/11/30 14:02:50 by tsiguenz         ###   ########.fr       */
+/*   Updated: 2021/11/30 17:43:40 by tsiguenz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ static int	len_rt(const char *s1, const char *set)
 
 	i = ft_strlen(s1) - 1;
 	j = 0;
-	while (is_set(s1[i], set))
+	while (i >= 0 && is_set(s1[i], set))
 	{
 		i--;
 		j++;
@@ -89,13 +89,4 @@ char	*ft_strtrim(const char *s1, const char *set)
 		j++;
 	}
 	return (dest);
-}
-
-int	main(void)
-{
-	char s1[] = "          ";
-	char	*strtrim;
-	strtrim = ft_strtrim(s1, " ");
-	write(1, strtrim, ft_strlen(strtrim));
-	return (0);
 }

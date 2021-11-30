@@ -6,7 +6,7 @@
 /*   By: tsiguenz <tsiguenz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 16:25:43 by tsiguenz          #+#    #+#             */
-/*   Updated: 2021/11/29 23:05:43 by tsiguenz         ###   ########.fr       */
+/*   Updated: 2021/11/30 19:42:53 by tsiguenz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,10 @@ static int	wordcount(const char *s, char c)
 	int	ctr;
 	int	i;
 
-	ctr = 0;
+	ctr = 1;
 	i = 0;
+	if (!s[i])
+		return (0);
 	while (s[i] == c)
 		i++;
 	while (s[i])
@@ -27,7 +29,7 @@ static int	wordcount(const char *s, char c)
 			ctr++;
 		i++;
 	}
-	if (s[i] == c && s[i - 1] != c)
+	if (s[i] == c && s[i - 1] != c && c != 0)
 		ctr++;
 	return (ctr);
 }
@@ -42,7 +44,7 @@ static int	wordlen(const char *s, char c)
 	return (i);
 }
 
-static char	*wordcopy(const char *s, int n)
+static char	*wordcopy(char *s, int n)
 {
 	char	*res;
 
@@ -59,16 +61,6 @@ static char	*wordcopy(const char *s, int n)
 	return (res);
 }
 
-static void	ft_free_tab(char **tab, int len)
-{
-	int	i;
-
-	i = 0;
-	while (i < len)
-		free(tab[i]);
-	free(tab);
-}
-
 char	**ft_split(const char *s, char c)
 {
 	char	**tab;
@@ -77,25 +69,18 @@ char	**ft_split(const char *s, char c)
 
 	i = 0;
 	p_s = (char *) s;
-	tab = malloc((wordcount(p_s, c) + 1) * sizeof(char *));
+	tab = ft_calloc((wordcount(p_s, c) + 1), sizeof(char *));
 	if (tab == 0)
 		return (0);
-	while (i < wordcount(p_s, c))
+	while (wordcount(p_s, c) > 0)
 	{
 		while (*p_s && *p_s == c)
 			p_s++;
-		while (*p_s && *p_s != c)
+		if (*p_s && *p_s != c)
 		{
-			tab[i] = wordcopy(p_s, wordlen(p_s, c));
-			if (tab[i] == 0)
-			{
-				ft_free_tab(tab, i);
-				return (0);
-			}
+			tab[i++] = wordcopy(p_s, wordlen(p_s, c));
 			p_s = p_s + wordlen(p_s, c);
 		}
-		i++;
 	}
-	tab[i] = 0;
 	return (tab);
 }

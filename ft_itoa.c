@@ -6,31 +6,29 @@
 /*   By: tsiguenz <tsiguenz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 11:01:35 by tsiguenz          #+#    #+#             */
-/*   Updated: 2021/11/30 13:52:48 by tsiguenz         ###   ########.fr       */
+/*   Updated: 2021/11/30 21:24:25 by tsiguenz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*ft_strrev(char *str)
+void	ft_strrev(char *str)
 {
-	char	*tmp;
 	int		i;
 	int		j;
+	char	tmp;
 
 	i = 0;
-	j = ft_strlen(str);
-	tmp = ft_calloc((ft_strlen(str) + 1), sizeof(char));
-	if (tmp == 0)
-		return (0);
-	tmp[j--] = 0;
-	while (str[i])
+	j = ft_strlen(str) - 1;
+	tmp = 0;
+	while (i <= j)
 	{
-		tmp[j] = str[i];
+		tmp = *(str + i);
+		*(str + i) = *(str + j);
+		*(str + j) = tmp;
 		i++;
 		j--;
 	}
-	return (tmp);
 }
 
 static int	len_itoa(int n)
@@ -71,11 +69,11 @@ char	*ft_itoa(int n)
 	i = 0;
 	neg = is_neg(n);
 	n = n * neg;
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
 	dest = ft_calloc((len_itoa(n) + 1), sizeof(char));
 	if (dest == 0)
 		return (0);
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
 	while (n > 9)
 	{
 		dest[i++] = (n % 10) + 48;
@@ -84,6 +82,6 @@ char	*ft_itoa(int n)
 	dest[i] = n + 48;
 	if (neg == -1)
 		dest[++i] = '-';
-	dest = ft_strrev(dest);
+	ft_strrev(dest);
 	return (dest);
 }
