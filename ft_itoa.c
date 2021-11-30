@@ -6,7 +6,7 @@
 /*   By: tsiguenz <tsiguenz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 11:01:35 by tsiguenz          #+#    #+#             */
-/*   Updated: 2021/11/29 23:45:15 by tsiguenz         ###   ########.fr       */
+/*   Updated: 2021/11/30 13:52:48 by tsiguenz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,7 @@ static char	*ft_strrev(char *str)
 		i++;
 		j--;
 	}
-	str = tmp;
-	return (str);
+	return (tmp);
 }
 
 static int	len_itoa(int n)
@@ -53,7 +52,7 @@ static int	len_itoa(int n)
 		len++;
 		n = n / 10;
 	}
-	return (len);
+	return (len + 1);
 }
 
 static int	is_neg(int n)
@@ -76,7 +75,7 @@ char	*ft_itoa(int n)
 	if (dest == 0)
 		return (0);
 	if (n == -2147483648)
-		return ("-2147483648");
+		return (ft_strdup("-2147483648"));
 	while (n > 9)
 	{
 		dest[i++] = (n % 10) + 48;

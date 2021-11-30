@@ -6,7 +6,7 @@
 /*   By: tsiguenz <tsiguenz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 10:21:15 by tsiguenz          #+#    #+#             */
-/*   Updated: 2021/11/29 22:32:09 by tsiguenz         ###   ########.fr       */
+/*   Updated: 2021/11/30 14:02:50 by tsiguenz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,4 +89,13 @@ char	*ft_strtrim(const char *s1, const char *set)
 		j++;
 	}
 	return (dest);
+}
+
+int	main(void)
+{
+	char s1[] = "          ";
+	char	*strtrim;
+	strtrim = ft_strtrim(s1, " ");
+	write(1, strtrim, ft_strlen(strtrim));
+	return (0);
 }
