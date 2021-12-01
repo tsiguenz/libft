@@ -6,7 +6,7 @@
 /*   By: debian <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 01:00:41 by debian            #+#    #+#             */
-/*   Updated: 2021/11/29 21:58:32 by tsiguenz         ###   ########.fr       */
+/*   Updated: 2021/12/01 11:48:49 by tsiguenz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	ft_atoi(const char *nptr)
 			neg = -1;
 		i++;
 	}
-	while (nptr[i] && ft_isdigit(nptr[i]))
+	while (ft_isdigit(nptr[i]))
 	{
 		res = (res * 10) + (nptr[i] - 48);
 		i++;

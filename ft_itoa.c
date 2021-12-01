@@ -6,7 +6,7 @@
 /*   By: tsiguenz <tsiguenz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 11:01:35 by tsiguenz          #+#    #+#             */
-/*   Updated: 2021/11/30 21:24:25 by tsiguenz         ###   ########.fr       */
+/*   Updated: 2021/12/01 12:00:00 by tsiguenz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,8 @@ static int	len_itoa(int n)
 
 static int	is_neg(int n)
 {
+	if (n == -2147483648)
+		return (1);
 	if (n < 0)
 		return (-1);
 	return (1);

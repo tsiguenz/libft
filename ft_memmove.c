@@ -6,7 +6,7 @@
 /*   By: debian <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 00:45:56 by debian            #+#    #+#             */
-/*   Updated: 2021/11/29 20:12:57 by tsiguenz         ###   ########.fr       */
+/*   Updated: 2021/12/01 13:28:56 by tsiguenz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,19 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char	*s;
-	char	*d;
 	size_t	i;
 
-	s = (char *)src;
-	d = (char *)dst;
 	i = 0;
-	if (d > s)
+	if (!dst && !src)
+		return (0);
+	if ((unsigned char *) dst > (unsigned char *) src)
 		while (len--)
-			d[len] = s[len];
+			((unsigned char *) dst)[len] = ((unsigned char *) src)[len];
 	else
 	{
 		while (i < len)
 		{
-			d[i] = s[i];
+			((unsigned char *) dst)[i] = ((unsigned char *) src)[i];
 			i++;
 		}
 	}
