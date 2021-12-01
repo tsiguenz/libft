@@ -6,7 +6,7 @@
 /*   By: tsiguenz <tsiguenz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 20:16:00 by tsiguenz          #+#    #+#             */
-/*   Updated: 2021/12/01 13:34:40 by tsiguenz         ###   ########.fr       */
+/*   Updated: 2021/12/01 15:19:30 by tsiguenz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_list;
 	t_list	*new_elem;
 
-	if (!f || !del)
-		return (0);
 	new_list = 0;
 	while (lst)
 	{
