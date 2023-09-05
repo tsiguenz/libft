@@ -6,7 +6,7 @@
 /*   By: tsiguenz <tsiguenz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 23:22:38 by thibautsi         #+#    #+#             */
-/*   Updated: 2022/02/02 20:07:18 by tsiguenz         ###   ########.fr       */
+/*   Updated: 2023/09/05 18:02:12 by tsiguenz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,5 +71,6 @@ int			ft_gnl(int fd, char **dest);
 int			ft_max(int a, int b);
 int			ft_abs(int a);
 int			ft_printf(const char *format, ...);
+int			ft_printf_fd(int fd, const char *format, ...);
 void		ft_print_bin(char *str, char c);
 #endif //LIBFT_H
